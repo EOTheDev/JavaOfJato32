@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HOME</title>
+</head>
+<body>
+<form action="libri" method="post">
+	<input type="text" name="titolo" placeholder="Titolo" >
+	<input type="submit" value="crea">
+</form>
+
+
+<ul id="lista">
+</ul>
+
+<script type="text/javascript">
+
+
+const URL="http://localhost:8080/Prj_18_Riepilogo/libri";
+
+var output="";
+fetch(URL).then(r => r.json()).then(d=>{
+	for (const libro of d) {
+		output +="<li>"+libro.titolo+"</li>";
+	}
+	document.getElementById("lista").innerHTML=output;
+}
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
