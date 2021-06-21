@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<%@page import="model.Libro"%>
+<%@page import="entities.Libro"%>
 <html>
 <head>
 <meta charset="UTF-8">
