@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TITOLO</title>
+</head>
+<body>
+<ul id="libri">
+
+</ul>
+<script>
+    const LIBRI =document.getElementById("libri");
+    const URL = "http://localhost:8080/Prj_27_Biblioteca/libri";
+
+    fetch(URL).then(pippo=>pippo.json()).then(titoli=>{
+        for (const titolo of titoli){
+            let li = document.createElement("li");
+            li.innerHTML=titolo.titolo;
+            LIBRI.appendChild(li);
+        }
+    });
+    
+</script>
+</body>
+</html>
